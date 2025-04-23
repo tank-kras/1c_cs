@@ -17,6 +17,17 @@
 подождать 30 секунд пока Postgres запуститься
 затем внури контейнера в файле `/var/lib/postgresql/data/pg_hba.conf`, в конце файла добавить `host    all             all             0.0.0.0/0               md5`
 
+внутри контейнера postgres необходимо создать базу
+
+```
+Вводим
+CREATE DATABASE cs OWNER postgres;
+\c cs
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+```
+
+где cs имя базы
+
 ## Запуск
 
 запуск контейнера сервера взаимодействия
