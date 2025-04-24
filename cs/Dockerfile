@@ -71,19 +71,6 @@ RUN sudo useradd hc_user \
 COPY ./scripts/start.sh /opt
 RUN chmod +x /opt/start.sh
 
-#cs
-EXPOSE 8087
-EXPOSE 8086
-EXPOSE 8085
-#-----
-#elastic
-EXPOSE 9300
-#hazelcast
-EXPOSE 8080
-EXPOSE 5701
-EXPOSE 5702
-EXPOSE 5703
-#-----
 EXPOSE 9094
 
 ENTRYPOINT ["/opt/start.sh"]

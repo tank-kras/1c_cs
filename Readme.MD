@@ -21,9 +21,12 @@
 
 ```
 Вводим
+su - postgres
+psql
 CREATE DATABASE cs OWNER postgres;
 \c cs
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+\q
 ```
 
 где cs имя базы
@@ -32,7 +35,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 запуск контейнера сервера взаимодействия
 
-`docker run -ti --name cs --link postgres:postgres -e POSTGRES_URL=postgres:5432/cs -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 8181:8181 -p 8087:8087 -p 9300:9300 -p 8080:8080 -p 5701:5701 -p 9094:9094 cs:v27`
+`docker run -ti --name cs --link postgres:postgres -e POSTGRES_URL=postgres:5432/cs -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -p 9094:9094 cs:v27`
 
 ## Инициализация базы
 
