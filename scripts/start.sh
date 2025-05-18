@@ -25,8 +25,8 @@ ring hazelcast --instance hc_instance service start
 echo "Статус hc_instance"
 ring hazelcast --instance hc_instance service status
 
-echo "Пауза 30 сек"
-sleep 30
+echo "Пауза 60 сек"
+sleep 60
 
 echo "Инициализация базы"
 curl -Sf -X POST -H "Content-Type: application/json" \
